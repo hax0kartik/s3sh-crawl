@@ -28,8 +28,8 @@ void daisywheelkbd::print(std::vector<std::tuple<std::string, float, float>> *bu
         C2D_TextGetDimensions(&buttons[i], 0.5f, 0.5f, &width, &height);
 	    C2D_DrawText(&buttons[i], C2D_WithColor | C2D_AtBaseline, std::get<1>(button) - (width/2), std::get<2>(button) - (height/2), 1.0f, 1.0f, 1.0f, C2D_Color32(0xA0, 0xA0, 0xA0, 0xFF));
     }
-    C2D_DrawImageAt(images[0], std::get<1>(button) + 3.75f, std::get<2>(button) + 3.75f, 0.6f, nullptr, 0.3f, 0.3f);
-    C2D_DrawCircleSolid(std::get<1>(button), std::get<2>(button) + 15.0f, 1.0f, 30.0f, 0xFF000030);
+   // C2D_DrawImageAt(images[0], std::get<1>(button) + 3.75f, std::get<2>(button) + 3.75f, 0.6f, nullptr, 0.3f, 0.3f);
+    //C2D_DrawCircleSolid(std::get<1>(button), std::get<2>(button) + 15.0f, 1.0f, 30.0f, 0xFF000030);
     LightLock_Unlock(lock);
 }
 

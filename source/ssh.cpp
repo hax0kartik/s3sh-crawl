@@ -62,8 +62,8 @@ int ssh::init()
 int ssh::mainLoop()
 {
 	auto input_cb = std::bind(utils.put_char, &utils, std::placeholders::_1);
-	auto kbd = std::make_unique<keyboard>(ui.bot_func, input_cb);
-	//auto kbd = std::make_unique<daisywheelkbd>(ui.bot_func, input_cb);
+	//auto kbd = std::make_unique<keyboard>(ui.bot_func, input_cb);
+	auto kbd = std::make_unique<daisywheelkbd>(ui.bot_func, input_cb);
 
 	utils.print("\x1b[2J");
 	utils.print("\x1b[0;0H");
